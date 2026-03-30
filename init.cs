@@ -28,7 +28,7 @@ namespace initConfig
             {
                 Console.WriteLine("Exiting the application...");
                 Environment.Exit(0);
-                return; // This line will never be reached, but it's required to satisfy the return type.
+                return;
             }
             else
             {
