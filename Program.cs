@@ -8,7 +8,7 @@ init.initFn();
 
 bool pushing = push.pushFn();
 
-while (commit.commitFn())
+while (commit.commitFn(pushing))
 {
 
 }
