@@ -6,7 +6,7 @@ namespace CommandRunner
 {
     public static class Command
     {
-        public static void Run(string command)
+        public static void Run(string? command)
         {
             string shell;
             string args;
