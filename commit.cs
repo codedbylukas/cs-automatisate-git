@@ -5,7 +5,7 @@ namespace Commits
 {
     public static class commit
     {
-        public static bool commitFn()
+        public static bool commitFn(bool pushing)
         {
             Console.WriteLine("Enter a commit message (or 'exit', 'e', 'q', 'quit' to exit):");
             string? command = Console.ReadLine();
@@ -24,6 +24,11 @@ namespace Commits
             {
                 Command.Run("git add .");
                 Command.Run($"git commit -m \"{command}\"");
+                if (pushing)
+                {
+                    Command.Run("git pull --rebase");
+                    Command.Run("git push");
+                }
                 Console.WriteLine("Commit successful.");
                 return true;
             }
