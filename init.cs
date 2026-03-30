@@ -7,7 +7,6 @@ namespace initConfig
     {
         public static void initFn()
         {
-
             Console.WriteLine("Starting the application...");
             Console.WriteLine("Do you want to initialize the repository? (y/n)(default: n)");
 
@@ -25,11 +24,16 @@ namespace initConfig
             {
                 Console.WriteLine("No input provided. Skipping repository initialization.");
             }
+            else if (input == "exit" || input == "e" || input == "q" || input == "quit")
+            {
+                Console.WriteLine("Exiting the application...");
+                Environment.Exit(0);
+                return; // This line will never be reached, but it's required to satisfy the return type.
+            }
             else
             {
                 Console.WriteLine("Invalid input. Please enter 'y' or 'n'.");
             }
-
         }
     }
 }
