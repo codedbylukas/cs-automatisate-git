@@ -23,7 +23,7 @@ namespace Commits
             }
             else if (command.ToLower() == "b")
             {
-                Console.WriteLine("Do you want to create a new branch and switch to it? (s/c)(s corresponds to switch to an existing branch, c to create a new branch)");
+                Console.WriteLine("Do you want to create a new branch and switch to it? (s/c)(s to switch to an existing branch, c to create a new branch)");
                 string? branchChoice = Console.ReadLine();
                 if (branchChoice?.ToLower() == "s")
                 {
@@ -33,6 +33,7 @@ namespace Commits
                 {
                     Branch.createBranch(pushing);
                 }
+                Environment.Exit(0);
                 return true;
             }
             else
