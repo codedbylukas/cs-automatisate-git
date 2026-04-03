@@ -5,7 +5,7 @@ namespace BranchMode
 {
     public static class Branch
     {
-        public static void createBranch()
+        public static void createBranch(bool pushing)
         {
             Console.WriteLine("Enter the name of the new branch you want to create (or 'exit', 'e', 'q', 'quit' to exit):");
             string? branchName = Console.ReadLine();
@@ -23,6 +23,10 @@ namespace BranchMode
             else
             {
                 Command.Run($"git switch -c {branchName}");
+                if (pushing)
+                {
+                    Command.Run($"git push origin {branchName}");
+                }
                 Console.WriteLine($"Branch '{branchName}' created and switched to it.");
             }
         }
