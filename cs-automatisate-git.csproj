@@ -7,5 +7,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="cs_automatisate_git.Tests\**" />
+    <EmbeddedResource Remove="cs_automatisate_git.Tests\**" />
+    <None Remove="cs_automatisate_git.Tests\**" />
+  </ItemGroup>
 
 </Project>
