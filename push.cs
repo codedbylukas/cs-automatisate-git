@@ -14,7 +14,7 @@ namespace Push
                 Console.WriteLine("Pushing after every modification enabled.");
                 return true;
             }
-            else if (input == "n" || input == "N")
+            else if (input?.ToLower() == "n")
             {
                 Console.WriteLine("Pushing after every modification disabled.");
                 return false;
