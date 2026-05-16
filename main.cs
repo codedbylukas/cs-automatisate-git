@@ -5,7 +5,7 @@ using Commits;
 using Push;
 
 
-public static class Program
+public static class cs_automatisate_git
 {
     public static void Main()
     {
