@@ -1,0 +1,13 @@
+adding tests
+
+# 1. Neues xUnit-Testprojekt erstellen
+dotnet new xunit -o MeinProjekt.Tests
+
+# 2. Das Testprojekt zur bestehenden Solution (.sln) hinzufügen
+dotnet sln add MeinProjekt.Tests/MeinProjekt.Tests.csproj
+
+# 3. Referenz auf dein eigentliches Projekt hinzufügen, damit du es überhaupt testen kannst
+dotnet add MeinProjekt.Tests/MeinProjekt.Tests.csproj reference MeinProjekt/MeinProjekt.csproj
+
+# 4. Alle Tests im aktuellen Verzeichnis ausführen
+dotnet test

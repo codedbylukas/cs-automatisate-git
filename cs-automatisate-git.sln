@@ -1,8 +1,10 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs-automatisate-git", "cs-automatisate-git.csproj", "{1CB49E86-8E25-700D-7585-833D7A5DE078}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs_automatisate_git.Tests", "cs_automatisate_git.Tests\cs_automatisate_git.Tests.csproj", "{422E5B7A-4163-4459-B7E4-3D40181A0214}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,6 +16,10 @@ Global
 		{1CB49E86-8E25-700D-7585-833D7A5DE078}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CB49E86-8E25-700D-7585-833D7A5DE078}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CB49E86-8E25-700D-7585-833D7A5DE078}.Release|Any CPU.Build.0 = Release|Any CPU
+		{422E5B7A-4163-4459-B7E4-3D40181A0214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{422E5B7A-4163-4459-B7E4-3D40181A0214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{422E5B7A-4163-4459-B7E4-3D40181A0214}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{422E5B7A-4163-4459-B7E4-3D40181A0214}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
