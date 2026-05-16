@@ -35,5 +35,9 @@ namespace CommandRunner
                 process?.WaitForExit();
             }
         }
+        public static void RunInit() 
+        {
+            Run("git init");
+        }
     }
 }
