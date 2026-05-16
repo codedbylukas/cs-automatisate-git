@@ -14,7 +14,7 @@ namespace initConfig
             if (input?.ToLower() == "y")
             {
                 Console.WriteLine("Initializing the repository...");
-                Command.Run("git init");
+                Command.RunInit();
             }
             else if (input?.ToLower() == "n")
             {
