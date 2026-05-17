@@ -1,4 +1,4 @@
-Package: cs_git_tool
+Package: cs-git-tool
 Version: 1.0
 Section: utils
 Priority: optional
