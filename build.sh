@@ -30,14 +30,12 @@ sed -i "s/Version: .*/Version: $NEW_VERSION/" Linux/DEBIAN/control
 # make folder if needed
 mkdir -p ./Linux/usr/bin/
 
-echo "Copying Linux binaries to package folder..."
-cp ./binarys/release/linux-x64/* ./Linux/usr/bin/
-mv ./Linux.deb ./binarys/release/linux-x64/CSharpGitTool_$NEW_VERSION.deb 
-
 # --- build debian package ---
 echo "Cleaning up old Debian-package..."
 rm -f ./Linux.deb
 echo "build Debian-package..."
 dpkg-deb --root-owner-group --build Linux
 
-
+echo "Copying Linux binaries to package folder..."
+cp ./binarys/release/linux-x64/* ./Linux/usr/bin/
+mv ./Linux.deb ./binarys/release/linux-x64/CSharpGitTool_$NEW_VERSION.deb 
