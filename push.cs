@@ -28,6 +28,7 @@ namespace Push
             else
             {
                 Console.WriteLine("Invalid input, please enter y or n.");
+                Environment.Exit(1);
                 return pushFn();
             }
         }
