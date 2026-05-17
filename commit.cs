@@ -23,16 +23,13 @@ namespace Commits
             }
             else if (command.ToLower() == "b")
             {
-                Console.WriteLine("Do you want to create a new branch and switch to it? (s/c)(s to switch to an existing branch, c to create a new branch)");
-                string? branchChoice = Console.ReadLine();
-                if (branchChoice?.ToLower() == "s")
-                {
-                    Branch.switchBranch();
-                }
-                else if (branchChoice?.ToLower() == "c")
-                {
-                    Branch.createBranch(pushing);
-                }
+                BranchMode();
+                Environment.Exit(0);
+                return true;
+            }
+            else if (command.ToLower() == "gl" || command.ToLower() == "git log")
+            {
+                Command.Run("git log");
                 Environment.Exit(0);
                 return true;
             }
@@ -47,6 +44,20 @@ namespace Commits
                 }
                 Console.WriteLine("Commit successful.");
                 return true;
+            }
+        }
+
+        public static void BranchMode()
+        {
+            Console.WriteLine("Do you want to create a new branch and switch to it? (s/c)(s to switch to an existing branch, c to create a new branch)");
+            string? branchChoice = Console.ReadLine();
+            if (branchChoice?.ToLower() == "s")
+            {
+                Branch.switchBranch();
+            }
+            else if (branchChoice?.ToLower() == "c")
+            {
+                Branch.createBranch(true);
             }
         }
     }
