@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=cs_git_tool
+Exec=/usr/bin/cs-automatisate-git
+Icon=icon.png
+Categories=Utility;
+Terminal=false
