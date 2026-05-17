@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "Bitte neue Version eingeben (z.B. 1.0.1):"
+echo "Enter new version (e.g., 1.0.1):"
 read version
 
 echo "⬆ update version to: $version"
