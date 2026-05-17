@@ -10,8 +10,8 @@ namespace Commits
         {
             Console.WriteLine("Enter a commit message (or 'exit', 'e', 'q', 'quit' to exit):");
             string? command = Console.ReadLine();
-
-            if (command?.ToLower() == "exit" || command?.ToLower() == "e" || command?.ToLower() == "q" || command?.ToLower() == "quit")
+            string? lowerCommand = command.ToLower();
+            if (lowerCommand == "exit" || lowerCommand == "e" || lowerCommand == "q" || lowerCommand == "quit")
             {
                 Console.WriteLine("Exiting the application...");
                 return false;
@@ -21,13 +21,13 @@ namespace Commits
                 Console.WriteLine("Commit message cannot be empty. Please try again.");
                 return true;
             }
-            else if (command.ToLower() == "b")
+            else if (lowerCommand == "b" || lowerCommand == "branch mode")
             {
                 BranchMode();
                 Environment.Exit(0);
                 return true;
             }
-            else if (command.ToLower() == "gl" || command.ToLower() == "git log")
+            else if (lowerCommand == "gl" || lowerCommand == "git log")
             {
                 Command.Run("git log");
                 Environment.Exit(0);
