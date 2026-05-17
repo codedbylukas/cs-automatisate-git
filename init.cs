@@ -33,6 +33,8 @@ namespace initConfig
             else
             {
                 Console.WriteLine("Invalid input. Please enter 'y' or 'n'.");
+                Environment.Exit(1);
+                return;
             }
         }
     }
