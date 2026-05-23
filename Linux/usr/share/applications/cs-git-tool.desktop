@@ -2,6 +2,6 @@
 Type=Application
 Name=cs_git_tool
 Exec=/usr/bin/cs-automatisate-git
-Icon=icon.png
+Icon=icon-cs-automate-git.png
 Categories=Utility;
 Terminal=false
