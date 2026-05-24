@@ -6,12 +6,13 @@ echo "Enter new version (e.g., 1.0.1):"
 read version
 
 echo "⬆ update version to: $version"
-sed -i "s/Version: .*/Version: $version/" Linux/DEBIAN/control
+sed -i "s/Version: .*/Version: $version/" linux-x64/DEBIAN/control
 
 ./build.sh
 
 echo "Copying Linux binaries to package folder..."
-mv ./Linux.deb ./binarys/release/CSharpGitTool_$version.deb 
+mv ./linux-x64.deb ./binarys/release/CSharpGitTool__x64_$version.deb 
+mv ./linux-arm.deb ./binarys/release/CSharpGitTool__arm_$version.deb
 
 # Zip binaries for GitHub Release
 echo "Createing zip files for GitHub Release..."
