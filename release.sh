@@ -7,12 +7,15 @@ read version
 
 echo "⬆ update version to: $version"
 sed -i "s/Version: .*/Version: $version/" linux-x64/DEBIAN/control
+sed -i "s/Version: .*/Version: $version/" linux-arm/DEBIAN/control
+sed -i "s/Version: .*/Version: $version/" linux-arm64/DEBIAN/control
 
 ./build.sh
 
 echo "Copying Linux binaries to package folder..."
 mv ./linux-x64.deb ./binarys/release/CSharpGitTool__x64_$version.deb 
 mv ./linux-arm.deb ./binarys/release/CSharpGitTool__arm_$version.deb
+mv ./linux-arm64.deb ./binarys/release/CSharpGitTool__arm64_$version.deb
 
 # Zip binaries for GitHub Release
 echo "Createing zip files for GitHub Release..."
