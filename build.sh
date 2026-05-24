@@ -33,6 +33,9 @@ for os in "${os_list[@]}"; do
     rsync -av --exclude="*.pdb" "./bin/Release/net6.0/$os/publish/" "./binarys/release/$os/"
 done
 
+mkdir -p ./binarys/release/linux-arm64/
+cp ./binarys/release/linux-arm64/* ./linux-arm64/usr/bin/
+
 mkdir -p ./linux-arm/usr/bin/
 cp ./binarys/release/linux-arm/* ./linux-arm/usr/bin/
 
@@ -42,7 +45,9 @@ cp ./binarys/release/linux-x64/* ./linux-x64/usr/bin/
 echo "Cleaning up old Debian-package..."
 rm -f ./linux-x64.deb
 rm -f ./linux-arm.deb
+rm -f ./linux-arm64.deb
 
 echo "Building Debian-package..."
 dpkg-deb --root-owner-group --build linux-x64
 dpkg-deb --root-owner-group --build linux-arm
+dpkg-deb --root-owner-group --build linux-arm64
