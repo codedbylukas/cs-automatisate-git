@@ -19,4 +19,4 @@ cd ../..
 
 # Upload binaries to GitHub Release
 echo "Creating GitHub release ..." 
-gh release create "v$version" ./binarys/release/*.zip ./binarys/release/*.deb --title "Version $version" --notes "Automatic generated builds."
+gh release create "v$version" ./binarys/release/*.zip --title "Version $version" --notes "Automatic generated builds."
